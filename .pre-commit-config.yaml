@@ -1,0 +1,39 @@
+# Copyright 2024 Weavers @ Eternal Loom. All rights reserved.
+#
+# Use of this software is governed by the license that can be
+# found in LICENSE file in the source repository.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      # - id: no-commit-to-branch # prevent direct commits to the `main` branch
+      - id: check-yaml
+        args: ["--unsafe"]
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: format
+        name: Format
+        entry: just
+        args: [format]
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: lint
+        name: Lint
+        entry: just
+        args: [lint]
+        types: [python]
+        language: system
+        pass_filenames: false
+      - id: typecheck
+        name: Typecheck
+        entry: just
+        args: [typecheck]
+        language: system
+        types: [python]
+        pass_filenames: false
