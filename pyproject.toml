@@ -19,8 +19,6 @@ Repository = "https://github.com/alywonder/agentic-ai"
 logfire = ["logfire>=2.3"]
 
 [tool.uv.sources]
-awhere = { workspace = true }
-awhere-examples = { workspace = true }
 
 
 [tool.uv.workspace]
