@@ -1,8 +1,6 @@
 # ⧊where (awhere): Agents Anywhere
 *An agentic workflow platform.*
 
-This is the root workspace for different packages in ⧊where framework
-
 > THIS PROJECT IS IN ACTIVE DEVELOPMENT. PLEASE CHECK BACK LATER!
 
 
