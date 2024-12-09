@@ -123,7 +123,7 @@ requires-dist = [
 [[package]]
 name = "awhere-examples"
 version = "0.1.0"
-source = { editable = "apps/awhere-examples" }
+source = { editable = "apps/awhere_examples" }
 
 [[package]]
 name = "babel"
