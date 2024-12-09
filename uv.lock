@@ -12,6 +12,9 @@ members = [
 name = "agentic-ai"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "awhere" },
+]
 
 [package.optional-dependencies]
 logfire = [
@@ -43,7 +46,10 @@ lint = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" }]
+requires-dist = [
+    { name = "awhere", editable = "libs/awhere" },
+    { name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" },
+]
 
 [package.metadata.requires-dev]
 dev = [
