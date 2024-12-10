@@ -134,7 +134,7 @@ filterwarnings = [
 # https://coverage.readthedocs.io/en/latest/config.html#run
 [tool.coverage.run]
 # required to avoid warnings about files created by create_module fixture
-include = ["apps/**/*.py", "libs/**/*.py", "tests/**/*.py"]
+include = ["apps/**/*.py", "libs/**/*.py"]
 omit = ["tests/test_live.py"]
 branch = true
 
