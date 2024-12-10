@@ -132,7 +132,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" },
-    { name = "logfire-api", specifier = ">=1.2.0" },
+    { name = "logfire-api", specifier = ">=2.6.0" },
     { name = "pydantic", specifier = ">=2.10" },
     { name = "pydantic-ai", specifier = ">=0.0.11" },
 ]

@@ -7,12 +7,13 @@
 import os
 from typing import Any, cast
 
-import logfire
+import logfire_api
 from pydantic import BaseModel
 from pydantic_ai import Agent
 from pydantic_ai.models import KnownModelName
 
-logfire.configure(send_to_logfire='if-token-present')
+_logfire = logfire_api.Logfire(otel_scope='aware-ai')
+# _logfire.configure(send_to_logfire='if-token-present')
 
 
 class MyModel(BaseModel):
