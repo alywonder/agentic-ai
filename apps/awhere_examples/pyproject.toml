@@ -7,8 +7,32 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Environment :: Console',
+    'Framework :: Pydantic :: 2',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: MacOS',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Internet',
+    'Typing :: Typed',
+]
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["awhere==0.1.0"]
+
+[tool.uv.sources]
+awhere = { workspace = true }
 
 [project.scripts]
 awhere-examples = "awhere_examples:main"

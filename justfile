@@ -65,6 +65,9 @@ testcov: test
     @echo "building coverage html"
     @uv run coverage html
 
+build-all:
+    uv build --all-packages
+
 # Build the documentation
 docs:
     uv run mkdocs build --no-strict
