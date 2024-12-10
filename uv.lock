@@ -108,6 +108,7 @@ name = "awhere"
 version = "0.1.0"
 source = { editable = "libs/awhere" }
 dependencies = [
+    { name = "logfire-api" },
     { name = "pydantic" },
     { name = "pydantic-ai" },
 ]
@@ -131,6 +132,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" },
+    { name = "logfire-api", specifier = ">=1.2.0" },
     { name = "pydantic", specifier = ">=2.10" },
     { name = "pydantic-ai", specifier = ">=0.0.11" },
 ]
@@ -691,7 +693,7 @@ wheels = [
 
 [[package]]
 name = "inline-snapshot"
-version = "0.14.2"
+version = "0.15.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "asttokens" },
@@ -702,9 +704,9 @@ dependencies = [
     { name = "tomli", marker = "python_full_version < '3.11'" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6d/54/afa680336b02c4ddd0e8bc470b4b1722650b3d238a97765e69e03b092485/inline_snapshot-0.14.2.tar.gz", hash = "sha256:9893cdb42c261e702672993368259fd37dbb455b6e668a2178151b28a2a88478", size = 221204 }
+sdist = { url = "https://files.pythonhosted.org/packages/76/7c/d6a61e2c21ad07ee50e3eb84fa1bccaaa862d660ba51dbc9ad4b2092d29b/inline_snapshot-0.15.0.tar.gz", hash = "sha256:d0be974774acd1d18c1a922a6f2904ac4fce87d9996cc38595d4b35ae0f59a15", size = 231796 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/62/2f/3dc469887d8229fe6f92b1151d1573ed6e2f4cc9f9c1a70e70a8ed642b4f/inline_snapshot-0.14.2-py3-none-any.whl", hash = "sha256:81bd87ec285a073de2a95eade4c67fb0c255d2937686d22e10bd17b09172715e", size = 32503 },
+    { url = "https://files.pythonhosted.org/packages/d7/22/278c367ededfce8e0ada244e6614caac0bacc85c8eb610a381cb7ca2ba67/inline_snapshot-0.15.0-py3-none-any.whl", hash = "sha256:5279b81410f06e537f9c0d799314f9703c1b43e4ed26794c9422bf011bae46d0", size = 40501 },
 ]
 
 [[package]]
