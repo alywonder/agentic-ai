@@ -129,14 +129,17 @@ jobs:
             # run tests with just awhere` dependencies
             - run: uv run --frozen --package awhere coverage run -m pytest
               env:
+                OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
                 COVERAGE_FILE: coverage/.coverage.${{ runner.os }}-py${{ matrix.python-version }}-slim
 
             - run: uv run --frozen coverage run -m pytest
               env:
+                OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
                 COVERAGE_FILE: coverage/.coverage.${{ runner.os }}-py${{ matrix.python-version }}-standard
 
             - run: uv run --frozen --all-extras coverage run -m pytest
               env:
+                OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
                 COVERAGE_FILE: coverage/.coverage.${{ runner.os }}-py${{ matrix.python-version }}-all-extras
 
             # - run: uv run --frozen --all-extras python tests/import_examples.py
