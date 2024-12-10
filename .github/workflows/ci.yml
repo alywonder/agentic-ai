@@ -3,6 +3,8 @@
 # Use of this software is governed by the license that can be
 # found in LICENSE file in the source repository.
 
+# This code is adapated from the [PydanticAI](https://ai.pydantic.dev/) code base.
+
 name: CI
 
 on:

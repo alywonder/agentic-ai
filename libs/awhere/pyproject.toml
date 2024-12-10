@@ -35,6 +35,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+logfire = ["logfire>=2.3"]
 
 [project.urls]
 Homepage = "https://awhere.ai/"

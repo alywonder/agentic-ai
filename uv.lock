@@ -16,11 +16,6 @@ dependencies = [
     { name = "awhere" },
 ]
 
-[package.optional-dependencies]
-logfire = [
-    { name = "logfire" },
-]
-
 [package.dev-dependencies]
 dev = [
     { name = "coverage", extra = ["toml"] },
@@ -46,10 +41,7 @@ lint = [
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "awhere", editable = "libs/awhere" },
-    { name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" },
-]
+requires-dist = [{ name = "awhere", editable = "libs/awhere" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -120,6 +112,11 @@ dependencies = [
     { name = "pydantic-ai" },
 ]
 
+[package.optional-dependencies]
+logfire = [
+    { name = "logfire" },
+]
+
 [package.dev-dependencies]
 dev = [
     { name = "coverage", extra = ["toml"] },
@@ -133,6 +130,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "logfire", marker = "extra == 'logfire'", specifier = ">=2.3" },
     { name = "pydantic", specifier = ">=2.10" },
     { name = "pydantic-ai", specifier = ">=0.0.11" },
 ]

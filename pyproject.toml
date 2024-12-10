@@ -15,8 +15,6 @@ Homepage = "https://awhere.ai/"
 Documentation = "https://docs.awhere.ai/"
 Repository = "https://github.com/alywonder/agentic-ai"
 
-[project.optional-dependencies]
-logfire = ["logfire>=2.3"]
 
 [tool.uv.sources]
 awhere = { workspace = true }
@@ -135,7 +133,7 @@ filterwarnings = [
 [tool.coverage.run]
 # required to avoid warnings about files created by create_module fixture
 include = ["apps/**/*.py", "libs/**/*.py"]
-omit = ["tests/test_live.py"]
+omit = ["awhere_examples"]
 branch = true
 
 # https://coverage.readthedocs.io/en/latest/config.html#report
