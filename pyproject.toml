@@ -89,7 +89,8 @@ quote-style = "single"
 typeCheckingMode = "strict"
 reportUnnecessaryTypeIgnoreComment = true
 reportMissingTypeStubs = false
-include = ["apps", "libs", "tests"]
+include = ["apps", "libs"]
+exclude = ["**/tests/**"]
 venvPath = ".venv"
 # see https://github.com/microsoft/pyright/issues/7771 - we don't want to error on
 # decorated functions in tests which are not otherwise used
@@ -98,14 +99,8 @@ executionEnvironments = [
 ]
 
 [tool.mypy]
-# plugins = [
-#   "pydantic.mypy"
-# ]
-files = ["apps/**/*.py", "libs/**/*.py"]
-exclude = [
-    "^test",
-    "tests/"
-]
+files = ["apps", "libs"]
+exclude = [".*/tests/.*"]
 strict = true
 follow_imports = "silent"
 warn_unused_ignores = false
