@@ -47,8 +47,8 @@ typecheck: typecheck-pyright
 typecheck-all: typecheck-pyright typecheck-mypy
 
 # Run tests and collect coverage data
-test:
-    uv run coverage run -m pytest
+test python_version="3.10":
+    UV_PROJECT_ENVIRONMENT=.venv{{replace(python_version, ".", "")}} uv run --python {{python_version}} coverage run -m pytest
     @uv run coverage report
 
 # Run tests on Python 3.9 to 3.13
