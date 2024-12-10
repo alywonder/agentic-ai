@@ -1,0 +1,30 @@
+/*
+ * Copyright 2024 Weavers @ Eternal Loom. All rights reserved.
+ * Use of this software is governed by the license that can be
+ * found in LICENSE file in the source repository.
+ */
+
+/* Revert hue value to that of pre mkdocs-material v9.4.0 */
+[data-md-color-scheme="slate"] {
+    --md-hue: 230;
+    --md-default-bg-color: hsla(230, 15%, 21%, 1);
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  img.index-header {
+    width: 70%;
+    max-width: 500px;
+  }
+
+  :root {
+    --md-primary-fg-color:        #EE0F0F;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #90030C;
+  }

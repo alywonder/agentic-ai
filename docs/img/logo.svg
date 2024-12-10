@@ -1,0 +1,18 @@
+<!--
+Copyright 2024 Weavers @ Eternal Loom. All rights reserved.
+Use of this software is governed by the license that can be
+found in LICENSE file in the source repository.
+-->
+
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="500" height="500" fill="white"/>
+<path d="M163 135L215.828 165V225L163 255L110.172 225V165L163 135Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M163 95L251 145V245L163 295V255L163.001 255L215.801 225V165L163.001 135L163 135V95Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M339 95L427 145V245L339 295V255L339 255L391.8 225V165L339 135L339 135V95Z" fill="white"/>
+<path d="M163 95L75 145V245L163 295L163 255L110.2 225V165L163 135L163 95Z" fill="#F8A73B"/>
+<path d="M339 95L251 145V245L339 295V255L286.2 225V165L339 135L339 95Z" fill="#F8A73B"/>
+<path d="M251 205L339 255L339 355L251 405V365L303.8 335V275L251 245L251 205Z" fill="#F8A73B"/>
+<path d="M251 205L163 255L163 355L251 405V365L198.2 335V275L251 245L251 205Z" fill="#F8A73B"/>
+<path d="M339 135L391.828 165V225L339 255L286.172 225V165L339 135Z" fill="black"/>
+<path d="M251 245L303.828 275V335L251 365L198.172 335V275L251 245Z" fill="black"/>
+</svg>

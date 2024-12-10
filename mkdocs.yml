@@ -1,0 +1,191 @@
+# Copyright 2024 Weavers @ Eternal Loom. All rights reserved.
+#
+# Use of this software is governed by the license that can be
+# found in LICENSE file in the source repository.
+
+site_name: ⧊where
+site_description: Agents Anywhere - An agentic workflow framework
+strict: true
+site_url: https://docs.awhere.ai
+
+repo_name: alywonder/awhere-ai
+repo_url: https://github.com/alywonder/awhere-ai
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2024 Weavers @ Eternal Loom. All rights reserved.
+
+# Dev URL localhost:port
+dev_addr: 127.0.0.1:8240
+
+nav:
+  - Introduction: index.md
+  - install.md
+  - help.md
+  - Documentation:
+    - agents.md
+    - dependencies.md
+    - results.md
+    - message-history.md
+    - testing-evals.md
+    - logfire.md
+  - Examples:
+    - examples/index.md
+    - examples/pydantic-model.md
+    - examples/weather-agent.md
+    - examples/bank-support.md
+    - examples/sql-gen.md
+    - examples/rag.md
+    - examples/stream-markdown.md
+    - examples/stream-whales.md
+    - examples/chat-app.md
+  - API Reference:
+    - api/agent.md
+    - api/tools.md
+    - api/result.md
+    - api/messages.md
+    - api/exceptions.md
+    - api/models/base.md
+    - api/models/openai.md
+    - api/models/gemini.md
+    - api/models/vertexai.md
+    - api/models/groq.md
+    - api/models/test.md
+    - api/models/function.md
+
+# Site theme
+theme:
+  name: material
+  favicon: img/favicon.svg
+  logo: img/logo.svg
+  features:
+    - announce.dismiss
+    # - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    annotation: material/plus-circle
+    repo: fontawesome/brands/git-alt
+
+plugins:
+  # - social
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - mermaid2
+  - minify:
+      minify_html: true
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: alphabetical
+            allow_inspection: true
+            show_bases: true
+  - blog:
+      enabled: !ENV CI
+      blog_dir: "blog"
+      blog_toc: true
+      post_dir: blog/posts
+      post_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      authors_file: "{blog}/.authors.yml"
+
+# Markdown extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: jxnl
+      repo: instructor
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/glossary.md
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+          # format: !!python/name:mermaid2.fence_mermaid_custom
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+
+watch:
+  - libs
+  - apps
